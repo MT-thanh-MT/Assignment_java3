@@ -111,7 +111,7 @@ public class QuanLySinhVienDAO implements QLSVInterface<SinhVien, String> {
         sv.setDiaChi(rs.getString("_DiaChi"));
         Blob blod = rs.getBlob("_Hinh");
         if (blod != null){
-            sv.setHinh(blod.getBytes(0, (int) blod.length()));
+            sv.setHinh(blod.getBytes(1, (int) blod.length()));
         }
         return sv;
     }
